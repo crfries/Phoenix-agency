@@ -11,8 +11,15 @@ a {
     font-size: 1.1.rem;
 }
 
+html {
+    @media (max-width: 1500px) {
+        font-size: 90%;
+    }
+}
+
 body {
     background: #1b1b1b;
+    overflow-x: hidden;
 }
 
 button {
@@ -28,6 +35,10 @@ button {
     &:hover {
         background-color: #23d997;
         color: white;
+    }
+
+    @media (max-width: 1500px) {
+        margin-bottom: 3rem;
     }
 
 }

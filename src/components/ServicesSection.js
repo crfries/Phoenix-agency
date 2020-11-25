@@ -78,11 +78,21 @@ const Services = styled(About)`
       padding: 2rem 0rem 4rem 0rem;
     }
   }
+  @media (max-width: 1300px) {
+    display: block;
+    padding: 2rem;
+    text-align: center;
+  }
 `;
 
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 1300px) {
+    display: inline-block;
+    text-align: center;
+  }
 `;
 
 const Card = styled.div`

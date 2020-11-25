@@ -7,6 +7,8 @@ import { MovieState } from "../movieState";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
+import ScrollTop from "../components/ScrollTop";
+
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
@@ -46,6 +48,7 @@ const MovieDetail = () => {
           </ImageDisplay>
         </Details>
       )}
+      <ScrollTop />
     </>
   );
 };
@@ -56,6 +59,10 @@ const Awards = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const AwardStyle = styled.div`
@@ -97,6 +104,12 @@ const Headline = styled.div`
     width: 100%;
     height: 70vh;
     object-fit: cover;
+  }
+
+  @media (max-width: 1300px) {
+    h2 {
+      margin-bottom: 2rem;
+    }
   }
 `;
 

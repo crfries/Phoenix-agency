@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import { useScroll } from "../components/UseScroll";
 
 //framer motion
 import { motion } from "framer-motion";
@@ -12,8 +13,9 @@ import { titleAnimation, fade, photoAnimation } from "../animation";
 import Wave from "./Wave";
 
 const AboutSection = () => {
+  const [element1, controls1] = useScroll();
   return (
-    <About>
+    <About ref={element1} animate={controls1} initial="show">
       <Description>
         <motion.div>
           <Hide>
@@ -36,7 +38,6 @@ const AboutSection = () => {
       </Description>
       <Image>
         <motion.img
-          
           variants={photoAnimation}
           src={home1}
           alt="guy with camera"
