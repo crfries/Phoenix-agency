@@ -20,7 +20,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             inital={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/" ? "30%" : "0%" }}
           />
         </li>
         <li>
@@ -28,7 +28,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             inital={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/work" ? "30%" : "0%" }}
           />
         </li>
         <li>
@@ -36,7 +36,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             inital={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/contact" ? "30%" : "0%" }}
           />
         </li>
       </ul>
