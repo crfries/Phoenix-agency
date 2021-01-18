@@ -54,7 +54,7 @@ const NavStyle = styled.nav`
   background: #282828;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 5;
 
   a {
     color: white;
@@ -92,11 +92,14 @@ const NavStyle = styled.nav`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: teal;
+  background: #23d997;
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 60;
+  left: 60%;
+  @media (max-width: 1300px) {
+    left: 0%;
+  }
 `;
 
 export default Nav;

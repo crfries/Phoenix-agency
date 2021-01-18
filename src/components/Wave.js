@@ -25,6 +25,7 @@ const Wave = () => {
 const WaveSvg = styled.svg`
   position: absolute;
   left: 0;
+  top: 200px;
   z-index: 1;
 `;
 

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
 import { scrollReveal } from "../animation";
 import { useScroll } from "./UseScroll";
 

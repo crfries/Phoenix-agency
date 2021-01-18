@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { About } from "../styles";
-import Toggle from "../components/Toggle";
-import { AnimateSharedLayout } from "framer-motion";
-import { useScroll } from "./UseScroll";
-import { scrollReveal } from "../animation";
+import React from 'react';
+import styled from 'styled-components';
+import { About } from '../styles';
+import Toggle from '../components/Toggle';
+import { AnimateSharedLayout } from 'framer-motion';
+import { useScroll } from './UseScroll';
+import { scrollReveal } from '../animation';
 
 const FaqSection = () => {
   const [element, controls] = useScroll();
@@ -13,15 +13,14 @@ const FaqSection = () => {
     <Faq
       variants={scrollReveal}
       animate={controls}
-      initial="hidden"
-      ref={element}
-    >
+      initial='hidden'
+      ref={element}>
       <h2>
-        any questions <span>FAQ</span>{" "}
+        any questions <span>FAQ</span>{' '}
       </h2>
       <AnimateSharedLayout>
-        <Toggle title="who are you?">
-          <div className="answer">
+        <Toggle title='lorem'>
+          <div className='answer'>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
@@ -31,8 +30,8 @@ const FaqSection = () => {
           </div>
         </Toggle>
 
-        <Toggle title="what is the meaning of life">
-          <div className="answer">
+        <Toggle title='lorem'>
+          <div className='answer'>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
@@ -42,8 +41,8 @@ const FaqSection = () => {
           </div>
         </Toggle>
 
-        <Toggle title="hello world">
-          <div className="answer">
+        <Toggle title='lorem'>
+          <div className='answer'>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
@@ -53,8 +52,8 @@ const FaqSection = () => {
           </div>
         </Toggle>
 
-        <Toggle title="ayyyye">
-          <div className="answer">
+        <Toggle title='lorem'>
+          <div className='answer'>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
