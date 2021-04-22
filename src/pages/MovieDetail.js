@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { useHistory } from "react-router-dom";
-import { MovieState } from "../movieState";
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
+import { MovieState } from '../movieState'
 
 //animation import
-import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../animation'
 
-import ScrollTop from "../components/ScrollTop";
+import ScrollTop from '../components/ScrollTop'
 
 const MovieDetail = () => {
-  const history = useHistory();
-  const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState);
-  const [movie, setMovie] = useState(null);
+  const history = useHistory()
+  const url = history.location.pathname
+  const [movies] = useState(MovieState)
+  const [movie, setMovie] = useState(null)
 
   //use effect
   useEffect(() => {
-    const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
-    setMovie(currentMovie[0]);
-  }, [movies, url]);
+    const currentMovie = movies.filter((stateMovie) => stateMovie.url === url)
+    setMovie(currentMovie[0])
+  }, [movies, url])
 
   return (
     <>
       {movie && (
         <Details
           variants={pageAnimation}
-          initial="hidden"
-          animate="show"
-          exit="exit"
+          initial='hidden'
+          animate='show'
+          exit='exit'
         >
           <Headline>
             <h2>{movie.title}</h2>
-            <img src={movie.mainImg} alt="movie"></img>
+            <img src={movie.mainImg} alt='movie'></img>
           </Headline>
           <Awards>
             {movie.awards.map((award) => (
@@ -44,14 +44,14 @@ const MovieDetail = () => {
             ))}
           </Awards>
           <ImageDisplay>
-            <img src={movie.secondaryImg} alt="movie" />
+            <img src={movie.secondaryImg} alt='movie' />
           </ImageDisplay>
         </Details>
       )}
       <ScrollTop />
     </>
-  );
-};
+  )
+}
 
 const Awards = styled.div`
   min-height: 80vh;
@@ -63,7 +63,7 @@ const Awards = styled.div`
     display: block;
     margin: 2rem 2rem;
   }
-`;
+`
 
 const AwardStyle = styled.div`
   padding: 5rem;
@@ -82,11 +82,11 @@ const AwardStyle = styled.div`
   p {
     padding: 1rem 0rem;
   }
-`;
+`
 
 const Details = styled(motion.div)`
   color: white;
-`;
+`
 
 const Headline = styled.div`
   min-height: 90vh;
@@ -111,7 +111,7 @@ const Headline = styled.div`
       margin-bottom: 2rem;
     }
   }
-`;
+`
 
 const ImageDisplay = styled.div`
   min-height: 50vh;
@@ -120,19 +120,19 @@ const ImageDisplay = styled.div`
     width: 100%;
     height: 100%;
   }
-`;
+`
 
 //Awards component
 const Award = ({ title, description }) => {
   return (
     <AwardStyle>
       <h3>{title}</h3>
-      <div className="line"></div>
+      <div className='line'></div>
       <p>{description}</p>
     </AwardStyle>
-  );
-};
+  )
+}
 
-export default MovieDetail;
+export default MovieDetail
 
 //useHistory will check the current path that you are on to compare it to the state. if it matches it will load the data
