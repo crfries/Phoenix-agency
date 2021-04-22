@@ -1,22 +1,23 @@
-import React from 'react';
-import styled from 'styled-components';
-import { About } from '../styles';
-import Toggle from '../components/Toggle';
-import { AnimateSharedLayout } from 'framer-motion';
-import { useScroll } from './UseScroll';
-import { scrollReveal } from '../animation';
+import React from 'react'
+import styled from 'styled-components'
+import { About } from '../styles'
+import Toggle from '../components/Toggle'
+import { AnimateSharedLayout } from 'framer-motion'
+import { useScroll } from './UseScroll'
+import { scrollReveal } from '../animation'
 
 const FaqSection = () => {
-  const [element, controls] = useScroll();
+  const [element, controls] = useScroll()
 
   return (
     <Faq
       variants={scrollReveal}
       animate={controls}
       initial='hidden'
-      ref={element}>
+      ref={element}
+    >
       <h2>
-        any questions <span>FAQ</span>{' '}
+        Any Questions? <span>FAQ</span>{' '}
       </h2>
       <AnimateSharedLayout>
         <Toggle title='lorem'>
@@ -64,8 +65,8 @@ const FaqSection = () => {
         </Toggle>
       </AnimateSharedLayout>
     </Faq>
-  );
-};
+  )
+}
 
 const Faq = styled(About)`
   display: block;
@@ -98,6 +99,6 @@ const Faq = styled(About)`
       padding: 1rem 0rem;
     }
   }
-`;
+`
 
-export default FaqSection;
+export default FaqSection

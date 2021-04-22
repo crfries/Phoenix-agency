@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 //styled component
 export const About = styled(motion.div)`
@@ -9,12 +9,13 @@ export const About = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
+  font-family: 'Roboto Condensed', sans-serif;
   @media (max-width: 1300px) {
     display: block;
     padding: 2rem;
     text-align: center;
   }
-`;
+`
 
 export const Description = styled.div`
   flex: 1;
@@ -23,7 +24,7 @@ export const Description = styled.div`
   h2 {
     font-weight: lighter;
   }
-`;
+`
 
 export const Image = styled.div`
   flex: 1;
@@ -34,8 +35,8 @@ export const Image = styled.div`
     height: 80vh;
     object-fit: cover;
   }
-`;
+`
 
 export const Hide = styled.div`
   overflow: hidden;
-`;
+`

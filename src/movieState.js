@@ -1,81 +1,81 @@
 //Import Images
-import athlete from "./img/athlete-small.png";
-import goodtimes from "./img/goodtimes-small.png";
-import theracer from "./img/theracer-small.png";
-import athlete2 from "./img/athlete2.png";
-import goodtimes2 from "./img/good-times2.jpg";
-import theracer2 from "./img/the-racer2.jpg";
+import athlete from './img/athlete-small.png'
+import goodtimes from './img/goodtimes-small.png'
+import theracer from './img/theracer-small.png'
+import athlete2 from './img/athlete2.png'
+import goodtimes2 from './img/good-times2.jpg'
+import theracer2 from './img/the-racer2.jpg'
 
 export const MovieState = () => {
   return [
     {
-      title: "The Athlete",
+      title: 'The Athlete',
       mainImg: athlete,
       secondaryImg: athlete2,
-      url: "/work/the-athlete",
+      url: '/work/the-athlete',
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: 'Truly A masterpiece',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: 'Fresh look on a brutal sport.',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
         {
-          title: "It’s okay lmao.",
+          title: 'A must watch.',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
       ],
     },
     {
-      title: "Good Times",
+      title: 'Good Times',
       mainImg: goodtimes,
-      url: "/work/the-goodtimes",
+      url: '/work/the-goodtimes',
       secondaryImg: goodtimes2,
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: 'Truly A masterpiece',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: 'Good times.',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
         {
-          title: "It’s okay lmao.",
+          title: 'A must watch.',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
       ],
     },
     {
-      title: "The Racer",
+      title: 'The Racer',
       mainImg: theracer,
-      url: "/work/the-racer",
+      url: '/work/the-racer',
       secondaryImg: theracer2,
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: 'Truly A masterpiece',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: 'The Racer is exhilarating .',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
         {
-          title: "It’s okay lmao.",
+          title: 'IA must watch.',
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
         },
       ],
     },
-  ];
-};
+  ]
+}

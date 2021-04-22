@@ -1,48 +1,48 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { useLocation } from 'react-router-dom'
 
 const Nav = () => {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
 
   return (
     <NavStyle>
       <h1>
-        <Link to="/" id="logo">
-          Work
+        <Link to='/' id='logo'>
+          Phoenix Agency
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">About Us</Link>
+          <Link to='/'>About Us</Link>
           <Line
             transition={{ duration: 0.75 }}
-            inital={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "30%" : "0%" }}
+            inital={{ width: '0%' }}
+            animate={{ width: pathname === '/' ? '30%' : '0%' }}
           />
         </li>
         <li>
-          <Link to="/work">Our Work</Link>
+          <Link to='/work'>Our Work</Link>
           <Line
             transition={{ duration: 0.75 }}
-            inital={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "30%" : "0%" }}
+            inital={{ width: '0%' }}
+            animate={{ width: pathname === '/work' ? '35%' : '0%' }}
           />
         </li>
         <li>
-          <Link to="/contact">Contact Us</Link>
+          <Link to='/contact'>Contact Us</Link>
           <Line
             transition={{ duration: 0.75 }}
-            inital={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "30%" : "0%" }}
+            inital={{ width: '0%' }}
+            animate={{ width: pathname === '/contact' ? '35%' : '0%' }}
           />
         </li>
       </ul>
     </NavStyle>
-  );
-};
+  )
+}
 
 const NavStyle = styled.nav`
   min-height: 10vh;
@@ -59,6 +59,7 @@ const NavStyle = styled.nav`
   a {
     color: white;
     text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
   }
 
   ul {
@@ -76,6 +77,10 @@ const NavStyle = styled.nav`
     position: relative;
   }
 
+  h1 {
+    font-family: 'Varela', sans-serif;
+  }
+
   @media (max-width: 1300px) {
     flex-direction: column;
     padding: 1rem 0rem;
@@ -88,7 +93,7 @@ const NavStyle = styled.nav`
       padding: 0;
     }
   }
-`;
+`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
@@ -96,10 +101,10 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 60%;
+  left: 70%;
   @media (max-width: 1300px) {
     left: 0%;
   }
-`;
+`
 
-export default Nav;
+export default Nav

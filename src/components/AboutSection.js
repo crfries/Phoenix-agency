@@ -1,21 +1,21 @@
-import React from "react";
-import home1 from "../img/home1.png";
-import { useScroll } from "../components/UseScroll";
+import React from 'react'
+import home1 from '../img/home1.png'
+import { useScroll } from '../components/UseScroll'
 
 //framer motion
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
 //style
-import { About, Description, Hide, Image } from "../styles";
+import { About, Description, Hide, Image } from '../styles'
 
 //animation
-import { titleAnimation, fade, photoAnimation } from "../animation";
-import Wave from "./Wave";
+import { titleAnimation, fade, photoAnimation } from '../animation'
+import Wave from './Wave'
 
 const AboutSection = () => {
-  const [element1, controls1] = useScroll();
+  const [element1, controls1] = useScroll()
   return (
-    <About ref={element1} animate={controls1} initial="show">
+    <About ref={element1} animate={controls1} initial='show'>
       <Description>
         <motion.div>
           <Hide>
@@ -40,12 +40,12 @@ const AboutSection = () => {
         <motion.img
           variants={photoAnimation}
           src={home1}
-          alt="guy with camera"
+          alt='guy with camera'
         ></motion.img>
       </Image>
       <Wave />
     </About>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection
